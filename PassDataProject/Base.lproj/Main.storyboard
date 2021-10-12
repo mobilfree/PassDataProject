@@ -52,6 +52,13 @@
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wc5-O7-KOn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-C3-iBu">
+                                <rect key="frame" x="97" y="639" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -70,12 +77,13 @@
                     <connections>
                         <outlet property="loginField" destination="bg3-GS-KPg" id="Ajl-yB-0gv"/>
                         <outlet property="passwordField" destination="C6A-Iq-MWX" id="YZy-SX-qlv"/>
+                        <outlet property="resultLabel" destination="V2d-C3-iBu" id="QpN-rY-18L"/>
                         <segue destination="TBp-HD-z5F" kind="show" identifier="detailSegue" id="uLe-6m-d7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="61"/>
+            <point key="canvasLocation" x="-278.26086956521743" y="60.9375"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="kSt-pE-F7p">
@@ -124,9 +132,11 @@
                     <navigationItem key="navigationItem" id="kqL-H2-Zvc"/>
                     <connections>
                         <outlet property="label" destination="d9g-De-wmY" id="YCR-yi-VVJ"/>
+                        <segue destination="mYe-wX-3nQ" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="Q23-6P-A4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IC-m6-QbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mYe-wX-3nQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="453.62318840579712" y="60.9375"/>
         </scene>

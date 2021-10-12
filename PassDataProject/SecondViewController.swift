@@ -20,5 +20,8 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func goBackButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
+    
     }
+    
 }
